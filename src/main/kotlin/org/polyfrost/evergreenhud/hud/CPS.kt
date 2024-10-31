@@ -106,7 +106,7 @@ class CPS: HudConfig("CPS", "evergreenhud/cps.json", false) {
                 val dividerSpaceWidth = mc.fontRendererObj.getStringWidth(dividerSpace) / 2 - 0.4f
                 val xOffset = x.toInt() + bracketWidth + titleLocation + cpsWidth + dividerSpaceWidth.toInt()
 
-                drawRectWithShadow(xOffset, y.toInt(), xOffset + 1, y.toInt() + 7, dividerColor.rgb, textType)
+                drawRectWithShadow(xOffset, y.toInt() - 1, xOffset + 1, y.toInt() + 8, dividerColor.rgb, textType)
             }
         }
     }

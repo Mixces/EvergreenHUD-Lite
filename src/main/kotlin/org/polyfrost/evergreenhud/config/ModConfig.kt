@@ -12,5 +12,4 @@ object ModConfig : Config(Mod(EvergreenHUD.NAME, ModType.HUD, "/assets/evergreen
     @SubConfig var armour = Armour()
     @SubConfig var cps = CPS()
     @SubConfig var fps = FPS()
-    @SubConfig var ping = Ping()
 }
