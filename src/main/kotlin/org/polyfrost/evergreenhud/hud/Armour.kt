@@ -14,7 +14,6 @@ import net.minecraft.client.gui.Gui
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.client.renderer.RenderHelper
 import net.minecraft.init.Items
-import net.minecraft.item.Item
 import net.minecraft.item.ItemBow
 import net.minecraft.item.ItemStack
 import org.polyfrost.evergreenhud.config.HudConfig
@@ -150,7 +149,7 @@ class Armour : HudConfig("ArmourHud", "evergreenhud/armour.json", false) {
         )
 
         override fun draw(matrices: UMatrixStack?, x: Float, y: Float, scale: Float, example: Boolean) {
-            draw(matrices, x, y, scale, getItems(example))
+            draw(x, y, scale, getItems(example))
         }
 
         private fun getItems(example: Boolean) = if (example) {
@@ -203,7 +202,7 @@ class Armour : HudConfig("ArmourHud", "evergreenhud/armour.json", false) {
             }
         }
 
-        private fun draw(matrices: UMatrixStack?, x: Float, y: Float, scale: Float, items: List<ItemStack>) {
+        private fun draw(x: Float, y: Float, scale: Float, items: List<ItemStack>) {
             val iconSize = 16f
             val offset = iconSize + padding
 
